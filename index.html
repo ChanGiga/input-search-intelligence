@@ -47,24 +47,24 @@
       }
     }
 
-  // // Mock data for autocomplete suggestions
-  // const suggestions = [
-  //     {
-  //       "value": "Australian National University 200",
-  //       "label": "Australian National University 200",
-  //       "category": "Suburb"
-  //     },
-  //     {
-  //       "value": "Dubai 300",
-  //       "label": "Dubai 300",
-  //       "category": "Suburb"
-  //     },
-  //     {
-  //       "value": "Darwin 800",
-  //       "label": "Darwin 800",
-  //       "category": "Suburb"
-  //     }
-  //   ];
+  // Mock data for autocomplete suggestions
+  const suggestions = [
+      {
+        "value": "Australian National University 200",
+        "label": "Australian National University 200",
+        "category": "Suburb"
+      },
+      {
+        "value": "Dubai 300",
+        "label": "Dubai 300",
+        "category": "Suburb"
+      },
+      {
+        "value": "Darwin 800",
+        "label": "Darwin 800",
+        "category": "Suburb"
+      }
+    ];
 
     // Function to filter suggestions based on input value
     async function filterSuggestions(inputValue) {
@@ -78,10 +78,10 @@
   // Function to filter and display autocomplete suggestions
   function showAutocompleteSuggestions() {
     const inputValue = searchInput.value.toLowerCase();
-    // const filteredSuggestions = suggestions.filter(suggestion =>
-    //   suggestion.value.toLowerCase().includes(inputValue)
-    // );
-    const filteredSuggestions = filterSuggestions(inputValue);
+    const filteredSuggestions = suggestions.filter(suggestion =>
+      suggestion.value.toLowerCase().includes(inputValue)
+    );
+    // const filteredSuggestions = filterSuggestions(inputValue);
     // Clear previous suggestions
     autocompleteDropdown.innerHTML = '';
 
